@@ -1,0 +1,11 @@
+/* -------SHOWCASE HEADING----------- */
+
+.main-header {
+  background-image: url("../img/record.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-header::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}

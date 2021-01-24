@@ -1,0 +1,62 @@
+/* -------SHOWCASE HEADING----------- */
+
+.main-header {
+  background-image: url("../img/record2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-header::after {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.service {
+  position: absolute;
+  /* top: 50%; */
+  left: 50%;
+  transform: translateX(-50%);
+  top: 220px;
+  width: 75%;
+  z-index: 20;
+  color: #fff;
+  background-color: var(--c-orange);
+  padding: 15px 15px;
+  text-align: center;
+  border-radius: 2px;
+}
+
+.service h2, .service p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* -------MEDIA QUERIES------------------------- */
+
+/* ------MEDIUM SCREENS---------- */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .service {
+    width: 65%;
+  }
+  .service p {
+    font-size: 18px;
+  }
+}
+
+/* -----------LARGE SCREENS-------------- */
+
+@media (min-width: 1200px) {
+  .main-heading h1 {
+    margin-top: 95px;
+  }
+  .service {
+    top: 330px;
+    width: 55%;
+  }
+  .service h2 {
+    font-size: 30px;
+  }
+  .service p {
+    font-size: 20px;
+  }
+}
