@@ -1,3 +1,9 @@
+*, ::after::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* -------SHOWCASE HEADING----------- */
 
 .main-header {
@@ -30,9 +36,248 @@
   margin-bottom: 0;
 }
 
+/* --------ALL BUTTONS---------- */
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
+.container {
+  margin: auto;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* ------SEARCH SECTION--------------- */
+
+.flex {
+  display: flex;
+}
+
+.search-div {
+  margin-top: 80px;
+  height: 50px;
+}
+
+input, .btn-search {
+  border: 3px solid var(--c-teal);
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  font-size: 14px;
+  padding: 8px 10px;
+}
+
+/* input[type="text"] {
+  width: 300px;
+} */
+
+input[type="text"] {
+  width: 250px;
+}
+
+.btn-search {
+  cursor: pointer;
+  border-left: 0;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  background-color: var(--c-teal);
+  color: #fff;
+}
+
+/* .btn-search {
+  margin-left: 0;
+  border-left: 0;
+  border-radius: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 40px;
+} */
+
+/* --------ACCORDION---------------- */
+
+.tracks-container {
+  /* needs to be row for larger screens */
+  width: 100%;
+  /* changed to flex in JS */
+  display: none;
+  /* display: flex; */
+  flex-direction: column;
+  margin-top: 50px;
+  border-top: solid 10px var(--c-teal);
+  border-right: solid 5px #000;
+  border-left: solid 5px #000;
+  /* background-color: rgb(230, 230, 230); */
+}
+
+.tracks-container img {
+  width: 100%;
+}
+
+.album-description {
+  text-align: left;
+  margin: 15px;
+}
+
+.tracks-ind-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: end; */
+  /* background-color: #eee;
+  color: #444; */
+  background-color: #000;
+  color: rgb(241, 240, 240);
+  /* cursor: pointer; */
+  padding: 5px 10px;
+  /* width: 100%; */
+  /* text-align: left; */
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion-icons {
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.accordion-icons a {
+  color: #fff;
+}
+
+.accordion p {
+  text-align: left;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+
+.active, .accordion:hover {
+  background-color: rgb(50, 50, 50);
+}
+
+/* Style the accordion panel. Note: hidden by default */
+
+.track-description {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
+
+.track-description p {
+  text-align: left;
+}
+
+.track-description.show {
+  display: block;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-icons .fa-arrow-down, .accordion-icons .fa-youtube-square {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.accordion-icons .fa-arrow-down:hover, .accordion-icons .fa-youtube-square:hover {
+  transform: scale(1.2);
+}
+
+.accordion-icons .fa-youtube-square {
+  margin-right: 15px;
+}
+
+.album-name {
+  background-color: #000;
+  height: 100%;
+  margin: 0;
+  padding: 20px 0;
+  color: #fff;
+}
+
+/* ---------INDIVIDUAL ALBUMS------------ */
+
+.album-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  color: #fff;
+}
+
+.searched {
+  display: none;
+  margin: 50px 0 20px 0;
+  padding: 20px 0;
+  width: 90%;
+  background-color: #000;
+  color: #fff;
+}
+
+.ind-album {
+  margin: 15px 0;
+  background-color: #000;
+  cursor: pointer;
+}
+
+.ind-album img {
+  width: 100%;
+}
+
+.album-title {
+  background-color: rgb(30, 30, 30);
+  margin: 0;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.album-title h2 {
+  margin: 0;
+  /* height: 100%; */
+}
+
+.tracks-info {
+  border-top: solid 10px rgb(121, 221, 40);
+}
+
 /* -------MEDIA QUERIES------------------------- */
 
 /* ------MEDIUM SCREENS---------- */
+
+@media (min-width: 550px) {
+  .album-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .ind-album {
+    min-width: 100px;
+    max-width: 200px;
+    margin: 0 30px 40px 30px;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .service {
@@ -40,6 +285,41 @@
   }
   .service p {
     font-size: 18px;
+  }
+  input[type="text"] {
+    width: 500px;
+  }
+  input, .btn-search {
+    font-size: 20px;
+  }
+  .tracks-info {
+    /* width: 50%; */
+    /* display: flex; */
+    width: 100%;
+    /* position: relative; */
+    /* align-items: flex-start; */
+    /* justify-content: flex-end; */
+    /* border-right: solid 10px #000; */
+  }
+  .tracks-info img {
+    /* position: absolute;
+    left: 0;
+    width: 50%; */
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+  }
+  .tracks-info p {
+    margin: 20px;
+  }
+  .tracks-ind-container {
+    /* position: absolute; */
+    /* width: 50%; */
+    /* position: relative; */
+    /* top: 77px; */
+  }
+  .tracks-container {
+    border-left: none;
   }
 }
 
@@ -58,5 +338,30 @@
   }
   .service p {
     font-size: 20px;
+  }
+  input[type="text"] {
+    width: 600px;
+  }
+  input, .btn-search {
+    font-size: 20px;
+  }
+  .tracks-container {
+    border-left: none;
+    width: 85%;
+  }
+  .tracks-info {
+    /* width: 50%; */
+    /* display: flex; */
+    width: 100%;
+    /* border-right: solid 10px #000; */
+  }
+  .tracks-info img {
+    width: 50%;
+    float: left;
+    width: 200px;
+    margin-right: 20px;
+  }
+  .tracks-info p {
+    margin: 20px;
   }
 }

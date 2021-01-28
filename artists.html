@@ -27,26 +27,187 @@
         <h1>What do you need to know?</h1>
       </div>
 
-      <div class="service">
+      <div class="service" id="service">
         <h2>Search for Artists</h2>
         <p>Find information on artists, albums, music videos and more!</p>
       </div>
     </header>
 
+    <div class="container">
+      <!-- search form -->
+      <div class="flex search-div">
+        <form class="flex" id="submit">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter band/artist name..."
+            maxlength="100"
+          />
+          <button class="btn-search" id="btn-search" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <!-- display message after search -->
+
+      <div class="search-message" id="search-message"></div>
+
+      <!-- display tracks of album -->
+      <!-- give youtube button id that can be used to get link from data object -->
+      <div class="tracks-container" id="tracks-container">
+        <div id="tracks-summary">
+          <!-- <h2 class="album-name" id="album-name">Muse - Absolution</h2>
+        <div class="tracks-info" id="tracks-info">
+          <img
+            src="https://www.theaudiodb.com/images/media/album/thumb/absolution-4ddc40807200f.jpg"
+            alt=""
+          />
+          <p class="album-description" id="album-description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
+            est maiores aperiam adipisci fugiat id ea debitis minus ipsum
+            dolorum doloribus qui quasi sequi harum dolores facilis consequuntur
+            error amet beatae nihil voluptate facere, repudiandae quo magnam.
+          </p>
+        </div> -->
+        </div>
+
+        <div class="tracks-ind-container" id="tracks-ind-container">
+          <!-- <div class="accordion">
+            <p>Track 1</p>
+            <div class="accordion-icons">
+              <i class="fab fa-youtube-square"></i>
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div>
+
+          <div class="accordion">
+            <p>Track 2</p>
+            <div class="accordion-icons">
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div>
+
+          <div class="accordion">
+            <p>Track 3</p>
+            <div class="accordion-icons">
+              <i class="fab fa-youtube-square"></i>
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div>
+
+          <div class="accordion">
+            <p>Track 3</p>
+            <div class="accordion-icons">
+              <i class="fab fa-youtube-square"></i>
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div>
+
+          <div class="accordion">
+            <p>Track 3</p>
+            <div class="accordion-icons">
+              <i class="fab fa-youtube-square"></i>
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div>
+
+          <div class="accordion">
+            <p>Track 3</p>
+            <div class="accordion-icons">
+              <i class="fab fa-youtube-square"></i>
+              <i class="fas fa-arrow-down"></i>
+            </div>
+          </div>
+
+          <div class="track-description">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
+              illum odit, veritatis perferendis aliquam temporibus.
+            </p>
+          </div> -->
+        </div>
+      </div>
+      <!-- artist title set to display none - change with JS -->
+      <div class="searched" id="searched">
+        <h2 id="searched-title"></h2>
+      </div>
+      <!-- ----DISPLAY ALBUMS------ -->
+      <!-- give id based on album id -->
+      <div class="album-container" id="album-container">
+        <!-- <div class="ind-album">
+          <div class="artist-title">
+            <h2>Muse</h2>
+          </div>
+          <img
+            src="https://www.theaudiodb.com/images/media/album/thumb/absolution-4ddc40807200f.jpg"
+            alt=""
+          />
+          
+          <div class="album-title">
+            <h2>Absolution</h2>
+          </div>
+
+          <h3 class="year-released">2003</h3>
+          <h3 class="album-genre">Rock</h3>
+          <h3 class="album-label">Whoever</h3>
+        </div> -->
+      </div>
+
+      <!-- end container div -->
+    </div>
+
     <div class="poppins">
-      <h2>Information</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque
-        temporibus perferendis, odio eius cum praesentium earum doloremque iste
-        autem.
-      </p>
-      <button class="btn-search" id="btn-search">
+      <button class="btn-test" id="btn-test">
         <i class="fas fa-search"></i>
       </button>
       <div id="display-api"></div>
     </div>
 
+    <!-- -----BANNER------ -->
+
+    <div id="banner-global"></div>
+
+    <!-- ----FOOTER------ -->
+
     <div id="footer-global"></div>
+
+    <!-- ---SCRIPTS----- -->
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -58,15 +219,19 @@
     <script>
       $(function () {
         $('#nav-global').load('/global/nav.html', function () {
-          console.log('load done');
+          // console.log('load done');
         });
+      });
+
+      $(function () {
+        $('#banner-global').load('/global/banner.html');
       });
 
       $(function () {
         $('#footer-global').load('/global/footer.html');
       });
     </script>
-
-    <script src="scripts/script.js"></script>
+    <script src="/scripts/artists.js"></script>
+    <!-- <script src="scripts/script.js"></script> -->
   </body>
 </html>

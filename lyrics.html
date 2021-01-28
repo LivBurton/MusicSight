@@ -31,6 +31,10 @@
         <h1>Lyric Finder!</h1>
         <p>Want to sing along to that earworm or your favourite artist?</p>
       </div>
+      <div class="service">
+        <h2>Search for Artists</h2>
+        <p>Find information on artists, albums, music videos and more!</p>
+      </div>
     </header>
 
     <div class="poppins">
@@ -51,6 +55,8 @@
       </ul>
     </div>
 
+    <div id="banner-global"></div>
+
     <div id="footer-global"></div>
 
     <script
@@ -63,6 +69,10 @@
     <script>
       $(function () {
         $('#nav-global').load('/global/nav.html');
+      });
+
+      $(function () {
+        $('#banner-global').load('/global/banner.html');
       });
 
       $(function () {
