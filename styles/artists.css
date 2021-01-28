@@ -191,8 +191,16 @@ input[type="text"] {
   display: block;
 }
 
+.fa-arrow-down:hover, .fa-youtube-square:hover {
+  transform: scale(1.2);
+}
+
 .rotate {
   transform: rotate(180deg);
+}
+
+.rotate:hover {
+  transform: scale(1.2) rotate(180deg);
 }
 
 .accordion-icons .fa-arrow-down, .accordion-icons .fa-youtube-square {
@@ -200,9 +208,9 @@ input[type="text"] {
   cursor: pointer;
 }
 
-.accordion-icons .fa-arrow-down:hover, .accordion-icons .fa-youtube-square:hover {
+/* .accordion-icons, .accordion-icons .fa-youtube-square:hover {
   transform: scale(1.2);
-}
+} */
 
 .accordion-icons .fa-youtube-square {
   margin-right: 15px;
@@ -238,11 +246,11 @@ input[type="text"] {
 .ind-album {
   margin: 15px 0;
   background-color: #000;
-  cursor: pointer;
 }
 
 .ind-album img {
   width: 100%;
+  cursor: pointer;
 }
 
 .album-title {

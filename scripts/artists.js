@@ -30,7 +30,6 @@ function searchSubmitted(e) {
 // Fetch search from API
 // -------------------------------------------------------
 async function searchForArtist(search) {
-  // console.log('search');
   const res = await fetch(
     `https://theaudiodb.com/api/v1/json/1/search.php?s=${search}`
   );
@@ -44,15 +43,13 @@ async function searchForArtist(search) {
 
     const dataAlbums = await res2.json();
     albumsInfo = dataAlbums;
-    // console.log(dataAlbums);
-    // testFilter(dataAlbums);
+
     displayAlbums(dataAlbums);
   } else {
     searchMessage.innerText = '0 results. Please try another search';
     searched.style.display = 'none';
     tracksContainer.style.display = 'none';
     albumContainer.innerHTML = '';
-    // search.value = '';
   }
 }
 // -------------------------------------------------------
@@ -60,7 +57,7 @@ async function searchForArtist(search) {
 // -------------------------------------------------------
 function displayAlbums(albums) {
   searched.style.display = 'block';
-  // console.log(searched);
+
   searchedTitle.innerText = `Albums for "${search.value}"`;
   search.value = '';
 
@@ -84,7 +81,6 @@ function displayAlbums(albums) {
   });
 
   albumContainer.innerHTML = displayData;
-  // console.log(albumContainer);
 }
 
 // -------------------------------------------------------
@@ -101,8 +97,6 @@ async function getTracks(e) {
     const dataTracks = await res.json();
 
     displayTracks(dataTracks, imgSrc, index);
-    // console.log(dataTracks);
-    // const artist = dataArtist.artists[0].idArtist;
   }
 }
 // -------------------------------------------------------
@@ -111,8 +105,7 @@ async function getTracks(e) {
 function displayTracks(tracks, imgSrc, index) {
   tracksContainer.style.display = 'flex';
   service.scrollIntoView();
-  // console.log(tracksContainer.style);
-  // console.log(tracks.track[0].strAlbum);
+
   let displayTracks = '';
   let tracksInd = '';
 
@@ -129,10 +122,8 @@ function displayTracks(tracks, imgSrc, index) {
           </p>
         </div>      
     `;
-  // if desc null then...if youtube null then...
 
   tracks.track.forEach(item => {
-    // console.log(item.strDescriptionEN);
     tracksInd += `
          <div class="accordion">
            <p>${item.strTrack}</p>
@@ -174,17 +165,30 @@ function displayTracks(tracks, imgSrc, index) {
 // Display track information on dropdown
 // -------------------------------------------------------
 
+// change the dropdown to show and rotate the arrow around
 function showTrackInfo(e) {
   if (e.target.classList.contains('fa-arrow-down')) {
     const showing = document.querySelector('.show');
-    if (showing !== null && !e.target.classList.contains('show')) {
-      showing.classList.remove('show');
-      showing.classList.remove('rotate');
+    const eContainer = e.target.parentElement.parentElement.nextElementSibling;
+    // if no dropdown showing already
+    if (showing === null) {
+      eContainer.classList.add('show');
+      e.target.classList.add('rotate');
     }
-    e.target.parentElement.parentElement.nextElementSibling.classList.toggle(
-      'show'
-    );
-    e.target.classList.toggle('rotate');
+    // if click on the container already open
+    else if (eContainer.classList.contains('show')) {
+      eContainer.classList.remove('show');
+      e.target.classList.remove('rotate');
+    }
+    // close container if click on another
+    else if (showing !== null) {
+      const rotated = document.querySelector('.rotate');
+      rotated.classList.remove('rotate');
+
+      showing.classList.remove('show');
+      eContainer.classList.add('show');
+      e.target.classList.add('rotate');
+    }
   }
 }
 
