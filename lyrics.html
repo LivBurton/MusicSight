@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link
-      href="https://fonts.googleapis.com/css2?family=Mitr&display=swap"
+
+    <link
       rel="stylesheet"
-    /> -->
-    <script
-      src="https://kit.fontawesome.com/3116385fbd.js"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
-    ></script>
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Mitr&family=Poppins:wght@200;400;600;700&display=swap"
       rel="stylesheet"
@@ -32,27 +31,34 @@
         <p>Want to sing along to that earworm or your favourite artist?</p>
       </div>
       <div class="service">
-        <h2>Search for Artists</h2>
-        <p>Find information on artists, albums, music videos and more!</p>
+        <h2>Search for Lyrics</h2>
+        <p>Search by band or song title</p>
       </div>
     </header>
 
-    <div class="poppins">
-      <h2>Information</h2>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque
-        temporibus perferendis, odio eius cum praesentium earum doloremque iste
-        autem.
-      </p>
-    </div>
+    <div class="container">
+      <!-- search form -->
+      <div class="flex search-div">
+        <form class="flex" id="form">
+          <input
+            type="text"
+            id="search"
+            placeholder="Enter band/artist/song..."
+            maxlength="100"
+          />
+          <button class="btn-search" id="btn-search" type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
 
-    <div class="test-lists">
-      <ul class="list-no-bullets">
-        <li><a href="">Information</a></li>
-        <li><a href="">Information</a></li>
-        <li><a href="">Information</a></li>
-        <li><a href="">Information</a></li>
-      </ul>
+      <!-- display message after search -->
+
+      <div class="search-message" id="search-message"></div>
+
+      <!-- -----LYRICS ADDED--------- -->
+      <div class="tracks-ind-container" id="tracks-ind-container"></div>
+      <div class="other-results" id="other-results"></div>
     </div>
 
     <div id="banner-global"></div>
@@ -64,6 +70,8 @@
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
       crossorigin="anonymous"
     ></script>
+
+    <script src="/scripts/lyrics.js"></script>
 
     <!-- Navigation and Footer -->
     <script>

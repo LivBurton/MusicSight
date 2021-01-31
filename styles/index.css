@@ -17,30 +17,20 @@
   flex-direction: column;
   position: absolute;
   align-items: center;
-  /* position: relative; */
-  /* left: 0; */
   top: 230px;
-  /* background-color: #fff; */
   width: 100%;
   z-index: 20;
   color: #fff;
-  /* margin-top: 50px; */
-  /* background-color: pink; */
 }
 
 .service {
-  /* position: absolute; */
   width: 250px;
   height: 230px;
   border: transparent;
-  /* border-radius: 50%; */
   border-radius: 2px;
-  /* border: 1px #fff solid; */
   margin-bottom: 20px;
   padding: 5px 20px;
-  /* align-self: center; */
   text-align: center;
-  /* background-color: blue; */
 }
 
 .service p {
@@ -54,7 +44,6 @@
 
 #service1 {
   background-color: var(--c-gold1);
-  /* margin-top: 50px; */
 }
 
 #service2 {
@@ -87,7 +76,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: #fff; */
   width: 100%;
 }
 
@@ -98,7 +86,6 @@
 }
 
 .mockup-div img {
-  /* margin-top: 50px; */
   margin-right: 20px;
   width: 325px;
   padding: 10px;
@@ -123,12 +110,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: var(--c-gold1); */
   color: black;
   margin: 20px 0;
   padding: 50px 0;
-  /* border-bottom: solid 1px var(--c-orange); */
-  /* border-top: solid 1px var(--c-orange); */
 }
 
 .music-highlights-div {
@@ -146,7 +130,6 @@
 
 .band-imgs {
   width: 50%;
-  /* margin: 0 auto; */
 }
 
 .band-imgs img {
@@ -155,13 +138,10 @@
   width: 30rem;
   height: 15rem;
   width: 100%;
-  /* text-align: center; */
-  /* margin: auto; */
 }
 
 .slick-arrow:before {
   color: black;
-  /* font-size: 30px; */
 }
 
 .music-highlights p {
@@ -174,7 +154,6 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   .services {
-    /* display: flex; */
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -262,14 +241,11 @@
     object-position: 0 0;
     width: 400px;
     height: 300px;
-    /* text-align: center; */
-    /* margin: auto; */
   }
   .music-highlights-div {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    /* align-items: flex-start; */
     text-align: left;
   }
   .music-highlights h2 {

@@ -1,3 +1,30 @@
+*, ::after::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+/* --------ALL BUTTONS---------- */
+
+button {
+  cursor: pointer;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+input:focus, button:focus {
+  outline: none;
+}
+
 /* -------SHOWCASE HEADING----------- */
 
 .main-header {
@@ -12,10 +39,9 @@
 
 .service {
   position: absolute;
-  /* top: 50%; */
   left: 50%;
   transform: translateX(-50%);
-  top: 220px;
+  top: 200px;
   width: 75%;
   z-index: 20;
   color: #fff;
@@ -27,7 +53,73 @@
 
 .service h2, .service p {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
+}
+
+/* ------------CONTACT FORM----------------- */
+
+.container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 130px auto 0;
+}
+
+.ind-input-container {
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.ind-input-container i {
+  padding: 10px;
+  background: rgb(80, 80, 80);
+  color: white;
+  min-width: 50px;
+  text-align: center;
+  border-left: solid rgb(80, 80, 80) 2px;
+  border-top: solid rgb(80, 80, 80) 2px;
+  border-bottom: solid rgb(80, 80, 80) 2px;
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  padding: 15px 10px;
+}
+
+.ind-input {
+  width: 100%;
+  padding: 10px;
+  border-right: solid rgb(80, 80, 80) 2px;
+  border-top: solid rgb(80, 80, 80) 2px;
+  border-bottom: solid rgb(80, 80, 80) 2px;
+  border-left: none;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ind-input:focus {
+  border: 2px solid orange;
+}
+
+form {
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.btn {
+  width: 100%;
+  background-color: rgb(60, 192, 115);
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  border: transparent;
+  border-radius: 2px;
+  font-size: 18px;
+  color: #fff;
+  padding: 8px 0;
+}
+
+.btn:hover {
+  background-color: rgb(77, 231, 141);
 }
 
 /* -------MEDIA QUERIES------------------------- */
@@ -40,6 +132,20 @@
   }
   .service p {
     font-size: 18px;
+  }
+  .container {
+    width: 70%;
+    margin: 80px auto 0;
+  }
+  .ind-input {
+    font-size: 18px;
+  }
+  .ind-input-container i {
+    font-size: 20px;
+  }
+  .btn {
+    margin-top: 15px;
+    font-size: 22px;
   }
 }
 
@@ -58,5 +164,18 @@
   }
   .service p {
     font-size: 20px;
+  }
+  .container {
+    width: 50%;
+  }
+  .btn {
+    margin-top: 15px;
+    font-size: 24px;
+  }
+  .ind-input-container i {
+    font-size: 20px;
+  }
+  .ind-input {
+    font-size: 18px;
   }
 }

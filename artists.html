@@ -3,10 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/3116385fbd.js"
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
       crossorigin="anonymous"
-    ></script>
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Mitr&family=Poppins:wght@200;400;600;700&display=swap"
       rel="stylesheet"
@@ -54,140 +56,19 @@
       <div class="search-message" id="search-message"></div>
 
       <!-- display tracks of album -->
-      <!-- give youtube button id that can be used to get link from data object -->
+
       <div class="tracks-container" id="tracks-container">
-        <div id="tracks-summary">
-          <!-- <h2 class="album-name" id="album-name">Muse - Absolution</h2>
-        <div class="tracks-info" id="tracks-info">
-          <img
-            src="https://www.theaudiodb.com/images/media/album/thumb/absolution-4ddc40807200f.jpg"
-            alt=""
-          />
-          <p class="album-description" id="album-description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam,
-            est maiores aperiam adipisci fugiat id ea debitis minus ipsum
-            dolorum doloribus qui quasi sequi harum dolores facilis consequuntur
-            error amet beatae nihil voluptate facere, repudiandae quo magnam.
-          </p>
-        </div> -->
-        </div>
+        <div id="tracks-summary"></div>
 
-        <div class="tracks-ind-container" id="tracks-ind-container">
-          <!-- <div class="accordion">
-            <p>Track 1</p>
-            <div class="accordion-icons">
-              <i class="fab fa-youtube-square"></i>
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div>
-
-          <div class="accordion">
-            <p>Track 2</p>
-            <div class="accordion-icons">
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div>
-
-          <div class="accordion">
-            <p>Track 3</p>
-            <div class="accordion-icons">
-              <i class="fab fa-youtube-square"></i>
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div>
-
-          <div class="accordion">
-            <p>Track 3</p>
-            <div class="accordion-icons">
-              <i class="fab fa-youtube-square"></i>
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div>
-
-          <div class="accordion">
-            <p>Track 3</p>
-            <div class="accordion-icons">
-              <i class="fab fa-youtube-square"></i>
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div>
-
-          <div class="accordion">
-            <p>Track 3</p>
-            <div class="accordion-icons">
-              <i class="fab fa-youtube-square"></i>
-              <i class="fas fa-arrow-down"></i>
-            </div>
-          </div>
-
-          <div class="track-description">
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur
-              illum odit, veritatis perferendis aliquam temporibus.
-            </p>
-          </div> -->
-        </div>
+        <div class="tracks-ind-container" id="tracks-ind-container"></div>
       </div>
       <!-- artist title set to display none - change with JS -->
       <div class="searched" id="searched">
         <h2 id="searched-title"></h2>
       </div>
       <!-- ----DISPLAY ALBUMS------ -->
-      <!-- give id based on album id -->
-      <div class="album-container" id="album-container">
-        <!-- <div class="ind-album">
-          <div class="artist-title">
-            <h2>Muse</h2>
-          </div>
-          <img
-            src="https://www.theaudiodb.com/images/media/album/thumb/absolution-4ddc40807200f.jpg"
-            alt=""
-          />
-          
-          <div class="album-title">
-            <h2>Absolution</h2>
-          </div>
 
-          <h3 class="year-released">2003</h3>
-          <h3 class="album-genre">Rock</h3>
-          <h3 class="album-label">Whoever</h3>
-        </div> -->
-      </div>
+      <div class="album-container" id="album-container"></div>
 
       <!-- end container div -->
     </div>
@@ -223,6 +104,5 @@
       });
     </script>
     <script src="/scripts/artists.js"></script>
-    <!-- <script src="scripts/script.js"></script> -->
   </body>
 </html>

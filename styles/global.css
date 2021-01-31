@@ -1,7 +1,6 @@
 :root {
   --c-teal: #004e66;
   --c-gold1: #fcbe32;
-  /* --c-gold1: #fab106; */
   --c-orange: #ff5f2e;
   --c-pale-blue: #e1eef6;
   /* second style */
@@ -21,7 +20,6 @@ body {
   background-color: #fff;
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  /* z-index: 10; */
 }
 
 .navbar {
@@ -114,23 +112,17 @@ body {
 /* ---------BANNER------------- */
 
 .banner-container {
-  display: flex;
-  /* flex: 1; */
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  display: grid;
+  grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+  gap: 5px;
   color: #fff;
+  margin: 50px 10px 10px 10px;
 }
 
 .banner-single {
   background-color: var(--c-mid-blue);
   padding: 10px;
   flex: 0 0 25%;
-  /* width: 0; */
-  min-width: 150px;
-  max-width: 230px;
-  margin-bottom: 10px;
   border-radius: 5px;
 }
 
@@ -195,7 +187,7 @@ footer h1 {
   margin: 20px;
 }
 
-.icons .fa {
+.icons .fab {
   color: var(--c-pale-blue);
   font-size: 30px;
 }
@@ -215,7 +207,6 @@ footer h1 {
     margin-right: 30px;
     flex-direction: row;
     justify-content: flex-end;
-    /* transition: ease-in 1s; */
   }
   .main-nav li {
     margin: 0;
@@ -244,20 +235,9 @@ footer h1 {
     margin: 50px 20px 0;
     font-size: 40px;
   }
-  .banner-single {
-    padding: 15px;
-    /* width: 0; */
-    min-width: 200px;
-    max-width: 220px;
-    border-radius: 5px;
-  }
-  .banner-single h2 {
-    font-size: 25px;
-  }
-  .banner-single img {
-    margin-bottom: 10px;
-    margin-right: 15px;
-    width: 50px;
+  .banner-container {
+    grid-template: repeat(2, 1fr)/repeat(3, 1fr);
+    margin: 50px 50px 10px 50px;
   }
   footer h1 {
     font-size: 30px;
@@ -281,5 +261,10 @@ footer h1 {
   .icons .fa {
     color: var(--c-pale-blue);
     font-size: 40px;
+  }
+  .banner-container {
+    display: grid;
+    grid-template: repeat(1, 1fr)/repeat(6, 1fr);
+    margin: 80px 50px 10px 50px;
   }
 }

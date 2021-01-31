@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 /* -------SHOWCASE HEADING----------- */
 
 .main-header {
@@ -18,7 +25,6 @@
 
 .service {
   position: absolute;
-  /* top: 50%; */
   left: 50%;
   transform: translateX(-50%);
   top: 220px;
@@ -67,7 +73,7 @@ input:focus, button:focus {
 }
 
 .search-div {
-  margin-top: 80px;
+  margin-top: 100px;
   height: 50px;
 }
 
@@ -78,10 +84,6 @@ input, .btn-search {
   font-size: 14px;
   padding: 8px 10px;
 }
-
-/* input[type="text"] {
-  width: 300px;
-} */
 
 input[type="text"] {
   width: 250px;
@@ -97,29 +99,17 @@ input[type="text"] {
   color: #fff;
 }
 
-/* .btn-search {
-  margin-left: 0;
-  border-left: 0;
-  border-radius: 0;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-  height: 40px;
-} */
-
 /* --------ACCORDION---------------- */
 
 .tracks-container {
-  /* needs to be row for larger screens */
   width: 100%;
   /* changed to flex in JS */
   display: none;
-  /* display: flex; */
   flex-direction: column;
   margin-top: 50px;
   border-top: solid 10px var(--c-teal);
   border-right: solid 5px #000;
   border-left: solid 5px #000;
-  /* background-color: rgb(230, 230, 230); */
 }
 
 .tracks-container img {
@@ -141,15 +131,9 @@ input[type="text"] {
   display: flex;
   flex-direction: row;
   align-items: center;
-  /* justify-content: end; */
-  /* background-color: #eee;
-  color: #444; */
   background-color: #000;
   color: rgb(241, 240, 240);
-  /* cursor: pointer; */
   padding: 5px 10px;
-  /* width: 100%; */
-  /* text-align: left; */
   border: none;
   outline: none;
   transition: 0.4s;
@@ -168,13 +152,9 @@ input[type="text"] {
   text-align: left;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-
 .active, .accordion:hover {
   background-color: rgb(50, 50, 50);
 }
-
-/* Style the accordion panel. Note: hidden by default */
 
 .track-description {
   padding: 0 18px;
@@ -208,10 +188,6 @@ input[type="text"] {
   cursor: pointer;
 }
 
-/* .accordion-icons, .accordion-icons .fa-youtube-square:hover {
-  transform: scale(1.2);
-} */
-
 .accordion-icons .fa-youtube-square {
   margin-right: 15px;
 }
@@ -238,9 +214,13 @@ input[type="text"] {
   display: none;
   margin: 50px 0 20px 0;
   padding: 20px 0;
-  width: 90%;
+  width: 100%;
   background-color: #000;
   color: #fff;
+}
+
+.searched h2 {
+  padding: 0 10px;
 }
 
 .ind-album {
@@ -262,7 +242,8 @@ input[type="text"] {
 
 .album-title h2 {
   margin: 0;
-  /* height: 100%; */
+  font-size: 18px;
+  padding: 0 10px;
 }
 
 .tracks-info {
@@ -301,18 +282,9 @@ input[type="text"] {
     font-size: 20px;
   }
   .tracks-info {
-    /* width: 50%; */
-    /* display: flex; */
     width: 100%;
-    /* position: relative; */
-    /* align-items: flex-start; */
-    /* justify-content: flex-end; */
-    /* border-right: solid 10px #000; */
   }
   .tracks-info img {
-    /* position: absolute;
-    left: 0;
-    width: 50%; */
     float: left;
     width: 200px;
     margin-right: 20px;
@@ -320,14 +292,24 @@ input[type="text"] {
   .tracks-info p {
     margin: 20px;
   }
-  .tracks-ind-container {
-    /* position: absolute; */
-    /* width: 50%; */
-    /* position: relative; */
-    /* top: 77px; */
-  }
   .tracks-container {
     border-left: none;
+  }
+  .searched {
+    width: 80%;
+  }
+  .album-container {
+    width: 100%;
+  }
+  .ind-album {
+    min-width: 220px;
+    min-height: 520px;
+  }
+  .album-title {
+    min-height: 80px;
+  }
+  .album-title h2 {
+    margin: auto;
   }
 }
 
@@ -358,10 +340,7 @@ input[type="text"] {
     width: 85%;
   }
   .tracks-info {
-    /* width: 50%; */
-    /* display: flex; */
     width: 100%;
-    /* border-right: solid 10px #000; */
   }
   .tracks-info img {
     width: 50%;
@@ -371,5 +350,18 @@ input[type="text"] {
   }
   .tracks-info p {
     margin: 20px;
+  }
+  .searched {
+    width: 80%;
+  }
+  .ind-album {
+    min-width: 220px;
+    min-height: 520px;
+  }
+  .album-title {
+    min-height: 80px;
+  }
+  .album-title h2 {
+    margin: auto;
   }
 }
