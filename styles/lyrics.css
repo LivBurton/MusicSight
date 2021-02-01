@@ -67,7 +67,7 @@ input:focus, button:focus {
 
 .container {
   width: 90%;
-  margin: auto;
+  margin: 0 auto 70px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,6 +108,12 @@ input[type="text"] {
 }
 
 /* ------ACCORDION------------------------------ */
+
+.search-message {
+  margin-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
 
 .tracks-ind-container {
   display: flex;
@@ -219,7 +225,6 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin-top: 100px;
   }
   .ind-accordion {
     display: flex;
@@ -266,7 +271,6 @@ input[type="text"] {
     display: flex;
     flex-direction: column;
     width: 90%;
-    margin-top: 100px;
   }
   .ind-accordion {
     display: flex;

@@ -14,7 +14,7 @@ function btnLyrics(e) {
   if (!searchEntered) {
     searchMessage.innerText = 'Please type in a search.';
   } else {
-    searchMessage.innerText = '';
+    searchMessage.innerText = `You searched for "${inputSearch.value}"`;
     searchLyrics(searchEntered);
   }
   inputSearch.value = '';
