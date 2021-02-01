@@ -77,6 +77,10 @@ body {
   display: block;
 }
 
+a.selected {
+  color: var(--c-mid-blue);
+}
+
 /* -------SHOWCASE HEADING----------- */
 
 .main-heading {
@@ -116,7 +120,7 @@ body {
   grid-template: repeat(3, 1fr)/repeat(2, 1fr);
   gap: 5px;
   color: #fff;
-  margin: 50px 10px 10px 10px;
+  margin: 0 10px 10px 10px;
 }
 
 .banner-single {
@@ -237,7 +241,7 @@ footer h1 {
   }
   .banner-container {
     grid-template: repeat(2, 1fr)/repeat(3, 1fr);
-    margin: 50px 50px 10px 50px;
+    margin: 0 50px 10px 50px;
   }
   footer h1 {
     font-size: 30px;
@@ -265,6 +269,6 @@ footer h1 {
   .banner-container {
     display: grid;
     grid-template: repeat(1, 1fr)/repeat(6, 1fr);
-    margin: 80px 50px 10px 50px;
+    margin: 0 50px 10px 50px;
   }
 }

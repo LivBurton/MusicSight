@@ -22,7 +22,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <link
       rel="stylesheet"
@@ -36,7 +36,29 @@
     <title>MusicSight</title>
   </head>
   <body>
-    <div id="nav-global"></div>
+    <nav class="navbar">
+      <div class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <a href="index.html" class="logo">MusicSight</a>
+      <ul class="main-nav" id="main-nav">
+        <li>
+          <a href="index.html" class="nav-link selected">Home</a>
+        </li>
+        <li>
+          <a href="artists.html" class="nav-link">Artists</a>
+        </li>
+        <li>
+          <a href="lyrics.html" class="nav-link">Lyrics</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Unknown</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
     <header class="main-header">
       <div class="main-heading">
@@ -111,8 +133,22 @@
       </div>
     </section>
 
-    <div id="footer-global"></div>
-
+    <!-- ------FOOTER-------------- -->
+    <footer>
+      <h1>MusicSight</h1>
+      <ul class="icons">
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="scripts/nav.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.5.1.min.js"
       integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
@@ -120,21 +156,11 @@
     ></script>
     <script
       type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
 
-    <!-- Navigation and Footer -->
+    <!-- PHOTO CAROUSEL -->
     <script>
-      $(function () {
-        $('#nav-global').load('/global/nav.html', function () {
-          console.log('load done');
-        });
-      });
-
-      $(function () {
-        $('#footer-global').load('/global/footer.html');
-      });
-
       $('.band-imgs').slick({
         dots: true,
         infinite: true,

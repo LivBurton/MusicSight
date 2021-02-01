@@ -22,7 +22,29 @@
     <title>MusicSight</title>
   </head>
   <body>
-    <div id="nav-global"></div>
+    <nav class="navbar">
+      <div class="nav-toggle" id="nav-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+      <a href="index.html" class="logo">MusicSight</a>
+      <ul class="main-nav" id="main-nav">
+        <li>
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li>
+          <a href="artists.html" class="nav-link selected">Artists</a>
+        </li>
+        <li>
+          <a href="lyrics.html" class="nav-link">Lyrics</a>
+        </li>
+        <li>
+          <a href="#" class="nav-link">Unknown</a>
+        </li>
+        <li>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+    </nav>
 
     <header class="main-header">
       <div class="main-heading">
@@ -75,11 +97,54 @@
 
     <!-- -----BANNER------ -->
 
-    <div id="banner-global"></div>
+    <div class="banner-container">
+      <div class="banner-single single1">
+        <h2>New Releases</h2>
+        <img src="img/banner/085.png" alt="" />
+      </div>
+
+      <div class="banner-single single2">
+        <h2>Nostalgia</h2>
+        <img src="img/banner/164.png" alt="" />
+      </div>
+
+      <div class="banner-single single3">
+        <h2>Bands</h2>
+        <img src="img/banner/069.png" alt="" />
+      </div>
+
+      <div class="banner-single single4">
+        <h2>Solo Artists</h2>
+        <img src="img/banner/227.png" alt="" />
+      </div>
+
+      <div class="banner-single single5">
+        <h2>Albums</h2>
+        <img src="img/banner/067.png" alt="" />
+      </div>
+
+      <div class="banner-single single6">
+        <h2>Singles</h2>
+        <img src="img/banner/084.png" alt="" />
+      </div>
+    </div>
 
     <!-- ----FOOTER------ -->
 
-    <div id="footer-global"></div>
+    <footer>
+      <h1>MusicSight</h1>
+      <ul class="icons">
+        <li>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </li>
+      </ul>
+    </footer>
 
     <!-- ---SCRIPTS----- -->
 
@@ -89,20 +154,7 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Navigation and Footer -->
-    <script>
-      $(function () {
-        $('#nav-global').load('/global/nav.html', function () {});
-      });
-
-      $(function () {
-        $('#banner-global').load('/global/banner.html');
-      });
-
-      $(function () {
-        $('#footer-global').load('/global/footer.html');
-      });
-    </script>
-    <script src="/scripts/artists.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/artists.js"></script>
   </body>
 </html>
